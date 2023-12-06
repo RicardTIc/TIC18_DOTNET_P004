@@ -42,6 +42,14 @@ class Documento
     public int Codigo { get; set; }
     public string Tipo { get; set; }
     public string Descricao { get; set; }
+
+     public Documento(DateTime dataModificacao, int codigo, string tipo, string descricao)
+    {
+        DataModificacao = dataModificacao;
+        Codigo = codigo;
+        Tipo = tipo; 
+        Descricao = descricao;
+    }
 }
 
 class CasoJuridico
@@ -101,7 +109,6 @@ class Program
     {
         Escritorio escritorio = new Escritorio();
 
-        // Exemplo de uso
         Advogado advogado1 = new Advogado("Advogado1", new DateTime(1990, 1, 1), "12345678901", "CNA1");
         Cliente cliente1 = new Cliente("Cliente1", new DateTime(1985, 5, 5), "98765432109", "Solteiro", "Engenheiro");
 
