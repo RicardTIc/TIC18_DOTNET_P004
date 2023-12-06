@@ -187,5 +187,33 @@ public class EscritorioAdvocacia
             Console.WriteLine("Idade mínima inválida.");
         }
     }
+    private void ImprimirAdvogados(IEnumerable<Advogado> advogados)
+    {
+        Console.WriteLine("\nAdvogados:\n");
 
+        foreach (var advogado in advogados)
+        {
+            Console.WriteLine($"Advogado: {advogado.Nome}, CPF: {advogado.CPF}, CNA: {advogado.CNA}");
+        }
+    }
+
+    private void ImprimirClientes(IEnumerable<Cliente> clientes)
+    {
+        Console.WriteLine("\nClientes:\n");
+
+        foreach (var cliente in clientes)
+        {
+            Console.WriteLine($"Cliente: {cliente.Nome}, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+        }
+    }
+
+    private void ImprimirAniversariantes(IEnumerable<Pessoa> aniversariantes)
+    {
+        Console.WriteLine("\nAniversariantes do Mês:\n");
+
+        foreach (var pessoa in aniversariantes)
+        {
+            Console.WriteLine($"Aniversariante: {pessoa.Nome}, CPF: {pessoa.CPF}");
+        }
+    }
 }
