@@ -8,9 +8,11 @@ public class CasoJuridico
     public List<Advogado> Advogados { get; set; }
     public Cliente Cliente { get; set; }
     public string Status { get; set; }
+    public List<Advogado> Advogados { get; set; }
+    public Cliente Cliente { get; set; }
 
     public CasoJuridico()
-    {
+    {   
         Documentos = new List<Documento>();
         Custos = new List<(float, string)>();
         Advogados = new List<Advogado>();
