@@ -14,8 +14,25 @@ public class ClienteExistenteException : Exception
 
 public class EscritorioAdvocacia
 {
+    private EntityManagement<Advogado> advogadoManagement = new EntityManagement<Advogado>();
+    private EntityManagement<Cliente> clienteManagement = new EntityManagement<Cliente>();
+    private EntityManagement<CasoJuridico> casoJuridicoManagement = new EntityManagement<CasoJuridico>();
     private List<Advogado> advogados = new List<Advogado>();
     private List<Cliente> clientes = new List<Cliente>();
+
+     public void InserirCasoJuridico(CasoJuridico casoJuridico)
+    {
+        casoJuridicoManagement.AddEntity(casoJuridico);
+        Console.WriteLine($"Caso Jurídico aberto para o cliente {casoJuridico.Cliente.Nome} inserido com sucesso.");
+    }
+
+       public void RemoverCasoJuridico(CasoJuridico casoJuridico)
+    {
+        casoJuridicoManagement.RemoveEntity(casoJuridico);
+        Console.WriteLine($"Caso Jurídico para o cliente {casoJuridico.Cliente.Nome} removido com sucesso.");
+    }
+
+
 
      public void AdicionarAdvogado(Advogado advogado)
     {
