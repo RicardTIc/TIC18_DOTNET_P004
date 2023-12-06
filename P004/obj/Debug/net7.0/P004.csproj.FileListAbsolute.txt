@@ -1,0 +1,15 @@
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/bin/Debug/net7.0/P004
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/bin/Debug/net7.0/P004.deps.json
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/bin/Debug/net7.0/P004.runtimeconfig.json
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/bin/Debug/net7.0/P004.dll
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/bin/Debug/net7.0/P004.pdb
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.csproj.AssemblyReference.cache
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.AssemblyInfoInputs.cache
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.AssemblyInfo.cs
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.csproj.CoreCompileInputs.cache
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.dll
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/refint/P004.dll
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.pdb
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/P004.genruntimeconfig.cache
+/home/daniel-penedo-santos/Documentos/dotNet_Daniel/Semana4/P004/obj/Debug/net7.0/ref/P004.dll
