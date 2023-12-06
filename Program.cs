@@ -1,8 +1,23 @@
 ﻿class Pessoa
 {
+    private string cpf;
     public string Nome { get; set; }
     public DateTime DataNascimento { get; set; }
-    public string CPF { get; set; }
+    public string CPF 
+    { 
+        get => cpf; 
+        set{
+
+            if (value.Length == 11)
+            {
+                cpf = $"{value.Substring(0, 3)}.{value.Substring(3, 3)}.{value.Substring(6, 3)}-{value.Substring(9)}";
+            }
+            else
+            {
+                cpf = value;
+            }
+        } 
+    }
 
     public Pessoa(string nome, DateTime dataNascimento, string cpf)
     {
