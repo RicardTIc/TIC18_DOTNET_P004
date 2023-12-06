@@ -1,0 +1,4 @@
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.AssemblyInfoInputs.cache
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.AssemblyInfo.cs
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.csproj.CoreCompileInputs.cache

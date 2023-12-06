@@ -62,3 +62,38 @@ class CasoJuridico
         Advogados = new List<Advogado>();
     }
 }
+
+class Escritorio
+{
+    private List<Advogado> advogados = new List<Advogado>();
+    private List<Cliente> clientes = new List<Cliente>();
+    private List<CasoJuridico> casosJuridicos = new List<CasoJuridico>();
+
+    public void AdicionarAdvogado(Advogado advogado)
+    {
+        advogados.Add(advogado);
+    }
+
+    public void AdicionarCliente(Cliente cliente)
+    {
+        clientes.Add(cliente);
+    }
+
+    // Implementar métodos para adicionar e remover casos jurídicos, documentos, etc.
+
+    public List<Advogado> ObterAdvogadosEntreIdades(int idadeMinima, int idadeMaxima)
+    {
+        DateTime dataAtual = DateTime.Now;
+        return advogados.Where(a => (dataAtual.Year - a.DataNascimento.Year) >= idadeMinima
+                                  && (dataAtual.Year - a.DataNascimento.Year) <= idadeMaxima).ToList();
+    }
+
+    public List<Cliente> ObterClientesEntreIdades(int idadeMinima, int idadeMaxima)
+    {
+        DateTime dataAtual = DateTime.Now;
+        return clientes.Where(c => (dataAtual.Year - c.DataNascimento.Year) >= idadeMinima
+                                  && (dataAtual.Year - c.DataNascimento.Year) <= idadeMaxima).ToList();
+    }
+
+    // Implementar outros métodos conforme necessário para os relatórios
+}
