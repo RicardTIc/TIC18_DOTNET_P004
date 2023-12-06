@@ -94,3 +94,33 @@ class Escritorio
     }
 
 }
+
+class Program
+{
+    static void Main()
+    {
+        Escritorio escritorio = new Escritorio();
+
+        // Exemplo de uso
+        Advogado advogado1 = new Advogado("Advogado1", new DateTime(1990, 1, 1), "12345678901", "CNA1");
+        Cliente cliente1 = new Cliente("Cliente1", new DateTime(1985, 5, 5), "98765432109", "Solteiro", "Engenheiro");
+
+        escritorio.AdicionarAdvogado(advogado1);
+        escritorio.AdicionarCliente(cliente1);
+
+        var relatorioAdvogados = escritorio.ObterAdvogadosEntreIdades(30, 40);
+        var relatorioClientes = escritorio.ObterClientesEntreIdades(25, 35);
+
+        Console.WriteLine("Advogados entre 30 e 40 anos:");
+        foreach (var adv in relatorioAdvogados)
+        {
+            Console.WriteLine(adv.Nome);
+        }
+
+        Console.WriteLine("Clientes entre 25 e 35 anos:");
+        foreach (var cli in relatorioClientes)
+        {
+            Console.WriteLine(cli.Nome);
+        }
+    }
+}
