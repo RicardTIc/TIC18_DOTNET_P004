@@ -1,0 +1,21 @@
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code directories
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# Compiled C# binaries
+bin/
+obj/
