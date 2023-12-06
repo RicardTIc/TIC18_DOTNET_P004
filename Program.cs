@@ -68,6 +68,8 @@ class CasoJuridico
         Documentos = new List<Documento>();
         Custos = new List<float>();
         Advogados = new List<Advogado>();
+        Cliente = new Cliente("", DateTime.Now, "", "", "");
+        Status = "Em aberto";
     }
 }
 

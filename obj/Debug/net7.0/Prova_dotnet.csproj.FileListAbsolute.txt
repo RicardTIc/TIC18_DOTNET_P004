@@ -1,0 +1,14 @@
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\bin\Debug\net7.0\Prova_dotnet.exe
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\bin\Debug\net7.0\Prova_dotnet.deps.json
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\bin\Debug\net7.0\Prova_dotnet.runtimeconfig.json
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\bin\Debug\net7.0\Prova_dotnet.dll
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\bin\Debug\net7.0\Prova_dotnet.pdb
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.AssemblyInfoInputs.cache
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.AssemblyInfo.cs
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.csproj.CoreCompileInputs.cache
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.dll
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\refint\Prova_dotnet.dll
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.pdb
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\Prova_dotnet.genruntimeconfig.cache
+C:\Users\Ian\Documents\PROJETOS\Prova_dotnet\obj\Debug\net7.0\ref\Prova_dotnet.dll
