@@ -79,8 +79,6 @@ class Escritorio
         clientes.Add(cliente);
     }
 
-    // Implementar métodos para adicionar e remover casos jurídicos, documentos, etc.
-
     public List<Advogado> ObterAdvogadosEntreIdades(int idadeMinima, int idadeMaxima)
     {
         DateTime dataAtual = DateTime.Now;
@@ -95,5 +93,4 @@ class Escritorio
                                   && (dataAtual.Year - c.DataNascimento.Year) <= idadeMaxima).ToList();
     }
 
-    // Implementar outros métodos conforme necessário para os relatórios
 }
