@@ -78,13 +78,32 @@ class CasoJuridico
     public Cliente Cliente { get; set; }
     public string Status { get; set; }
 
-    public CasoJuridico()
+    public CasoJuridico(DateTime dataAbertura, float probabilidadeDeSucesso, DateTime dataEncerramento, Cliente cliente, string status)
     {
+        Abertura = dataAbertura;
+        ProbabilidadeSucesso = probabilidadeDeSucesso;
         Documentos = new List<Documento>();
         Custos = new List<float>();
+        Encerramento = dataEncerramento;
         Advogados = new List<Advogado>();
-        Cliente = new Cliente("", DateTime.Now, "", "", "");
-        Status = "Em aberto";
+        Cliente = cliente;
+        Status = status;
+    }
+
+    
+    public void AdicionarDocumento(Documento documento)
+    {
+        Documentos.Add(documento);
+    }
+
+    public void AdicionarCustos(float custos)
+    {
+        Custos.Add(custos);
+    }
+    
+    public void AdicionarAdvogado(Advogado advogado)
+    {
+        Advogados.Add(advogado);
     }
 }
 
@@ -92,7 +111,9 @@ class Escritorio
 {
     private List<Advogado> advogados = new List<Advogado>();
     private List<Cliente> clientes = new List<Cliente>();
-    private List<CasoJuridico> casosJuridicos = new List<CasoJuridico>();
+    private List<CasoJuridico> casoJuridico = new List<CasoJuridico>();
+    private List<CasoJuridico> todosOsCasosJuridicos = new List<CasoJuridico>();
+    private List<CasoJuridico> todosOsCasos = new List<CasoJuridico>();
     private List<Cliente> todosOsClientes = new List<Cliente>();
     private List<Advogado> todosOsAdvogados = new List<Advogado>();
 
@@ -160,6 +181,16 @@ class Escritorio
         return aniversariantes;
     }
 
+    public List<CasoJuridico> ObterCasosEmAbertoOrdenadosPorDataDeInicio()
+    {
+        var casosEmAbertoOrdenados = todosOsCasos
+            .Where(caso => caso.Status.Equals("Em aberto", StringComparison.OrdinalIgnoreCase))
+            .OrderBy(caso => caso.Abertura)
+            .ToList();
+
+        return casosEmAbertoOrdenados;
+    }
+
 }
 
 class Program
@@ -170,6 +201,11 @@ class Program
 
         Advogado advogado1 = new Advogado("Advogado1", new DateTime(1990, 1, 1), "12345678901", "CNA1");
         Cliente cliente1 = new Cliente("Cliente1", new DateTime(1985, 5, 5), "98765432109", "Solteiro", "Engenheiro");
+        Documento documento1 = new Documento(new DateTime(1985, 5, 5), 111, "relatório", "documental");
+        CasoJuridico casoJuridico1 = new CasoJuridico(DateTime.Now.AddMonths(-1), 0.8f, DateTime.Now.AddMonths(1), new Cliente("Cliente1", DateTime.Now, "11111111111", "Casado", "Profissao1"), "Em aberto");
+        casoJuridico1.AdicionarAdvogado(advogado1);
+        casoJuridico1.AdicionarDocumento(documento1);
+        casoJuridico1.AdicionarCustos(21000);
 
         escritorio.AdicionarAdvogado(advogado1);
         escritorio.AdicionarCliente(cliente1);
@@ -180,41 +216,47 @@ class Program
         var relatorioClientesOrdemAlfabetica = escritorio.ObterClientesEmOrdemAlfabetica();
         var relatorioClientePorProfissao = escritorio.ObterClientesPorProfissao("Engenheiro");
         var relatorioAdvogadoClienteMesAniversario = escritorio.ObterAniversariantesDoMes(1);
+        var relatorioCasoAbertoEmOrdem = escritorio.ObterCasosEmAbertoOrdenadosPorDataDeInicio();
 
         Console.WriteLine("Advogados entre 30 e 40 anos:");
-        foreach (var adv in relatorioAdvogados)
-        {
-            Console.WriteLine(adv.Nome);
-        }
+            foreach (var adv in relatorioAdvogados)
+            {
+                Console.WriteLine(adv.Nome);
+            }
 
         Console.WriteLine("Clientes entre 25 e 35 anos:");
-        foreach (var cli in relatorioClientes)
-        {
-            Console.WriteLine(cli.Nome);
-        }
+            foreach (var cli in relatorioClientes)
+            {
+                Console.WriteLine(cli.Nome);
+            }
 
         Console.WriteLine("Clientes com o Estado Civil de Solteiro:" );
-        foreach (var cliEstCiv in relatorioClientesEstadoCivil)
-        {
-            Console.WriteLine(cliEstCiv.Nome);
-        }
+            foreach (var cliEstCiv in relatorioClientesEstadoCivil)
+            {
+                Console.WriteLine(cliEstCiv.Nome);
+            }
 
         Console.WriteLine("Clientes em Ordem Alfabética:");
-        foreach (var cliOrdAlf in relatorioClientesOrdemAlfabetica)
-        {
-            Console.WriteLine(cliOrdAlf.Nome);
-        }
+            foreach (var cliOrdAlf in relatorioClientesOrdemAlfabetica)
+            {
+                Console.WriteLine(cliOrdAlf.Nome);
+            }
 
         Console.WriteLine($"Clientes cuja profissão contenha Engenheiro:");
-        foreach (var cliPorProf in relatorioClientePorProfissao)
-        {
-            Console.WriteLine(cliPorProf.Nome);
-        }
+            foreach (var cliPorProf in relatorioClientePorProfissao)
+            {
+                Console.WriteLine(cliPorProf.Nome);
+            }
 
         Console.WriteLine($"Aniversariantes do Mês 1:");
             foreach (var pessoa in relatorioAdvogadoClienteMesAniversario)
             {
                 Console.WriteLine(pessoa.Nome);
+            }
+        Console.WriteLine("Casos Em Aberto Ordenados Por Data de Início:");
+            foreach (var caso in relatorioCasoAbertoEmOrdem)
+            {
+                Console.WriteLine($"Data de Abertura: {caso.Abertura:dd/MM/yyyy}, Cliente: {caso.Cliente.Nome}");
             }
     }
 }
