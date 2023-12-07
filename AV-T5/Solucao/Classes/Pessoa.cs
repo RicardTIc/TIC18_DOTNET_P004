@@ -28,12 +28,13 @@ public class Advogado : Pessoa
 public class Cliente : Pessoa
 {
     public string EstadoCivil { get; set; }
-    public string Profissao { get; set; }
+    public string Profissao { get; set; }    
 
     public Cliente(string _nome, DateTime _dataNascimento, string _CPF, string _estadoCivil, string _profissao) : base(_nome, _dataNascimento, _CPF)
     {
         this.EstadoCivil = _estadoCivil;
         this.Profissao = _profissao;
     }
+    
 }
 

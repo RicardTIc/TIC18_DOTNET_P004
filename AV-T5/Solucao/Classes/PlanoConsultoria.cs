@@ -22,7 +22,7 @@ public class PlanoConsultoria{
         return this.Titulo + " - " + this.ValorPorMes + " - " + this.Beneficios;
     }
 
-    public override bool Equals(object obj){
+    public override bool Equals(object? obj){
         if (obj == null)
             return false;
         if (obj is PlanoConsultoria){
