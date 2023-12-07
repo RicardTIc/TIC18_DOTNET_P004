@@ -1,8 +1,8 @@
-using AVT5.Solucao;
+namespace AVT5.Solucao;
 
 public static class App
 {
-    public static void Main()
+    public static void Init()
     {
         Escritorio escritorio = new Escritorio();
 
