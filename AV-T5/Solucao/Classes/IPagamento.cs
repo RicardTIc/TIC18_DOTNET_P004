@@ -1,4 +1,4 @@
- public interface IPagamento
+public interface IPagamento
     {
         string Tipo { get; set; }
         string Descricao { get; set; }
