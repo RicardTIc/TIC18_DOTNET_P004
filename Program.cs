@@ -93,6 +93,7 @@ class Escritorio
     private List<Advogado> advogados = new List<Advogado>();
     private List<Cliente> clientes = new List<Cliente>();
     private List<CasoJuridico> casosJuridicos = new List<CasoJuridico>();
+    private List<Cliente> todosOsClientes = new List<Cliente>();
 
     public void AdicionarAdvogado(Advogado advogado)
     {
@@ -101,6 +102,7 @@ class Escritorio
 
     public void AdicionarCliente(Cliente cliente)
     {
+        todosOsClientes.Add(cliente);
         clientes.Add(cliente);
     }
 
@@ -116,6 +118,17 @@ class Escritorio
         DateTime dataAtual = DateTime.Now;
         return clientes.Where(c => (dataAtual.Year - c.DataNascimento.Year) >= idadeMinima
                                   && (dataAtual.Year - c.DataNascimento.Year) <= idadeMaxima).ToList();
+    }
+
+    public List<Cliente> ObterClientesComEstadoCivil(string estadoCivilDesejado)
+    {
+
+        var clientesFiltrados = todosOsClientes
+            .Where(cliente => cliente.EstadoCivil.Equals(estadoCivilDesejado, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        return clientesFiltrados;
+
     }
 
 }
@@ -134,6 +147,7 @@ class Program
 
         var relatorioAdvogados = escritorio.ObterAdvogadosEntreIdades(30, 40);
         var relatorioClientes = escritorio.ObterClientesEntreIdades(25, 35);
+        var relatorioClientesEstadoCivil = escritorio.ObterClientesComEstadoCivil("Solteiro");
 
         Console.WriteLine("Advogados entre 30 e 40 anos:");
         foreach (var adv in relatorioAdvogados)
@@ -145,6 +159,12 @@ class Program
         foreach (var cli in relatorioClientes)
         {
             Console.WriteLine(cli.Nome);
+        }
+
+        Console.WriteLine("Clientes com o Estado Civil de Solteiro:" );
+        foreach (var cliEstCiv in relatorioClientesEstadoCivil)
+        {
+            Console.WriteLine(cliEstCiv.Nome);
         }
     }
 }
