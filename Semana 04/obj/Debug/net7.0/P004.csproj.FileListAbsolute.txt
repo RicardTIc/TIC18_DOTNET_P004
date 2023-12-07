@@ -1,0 +1,15 @@
+c:\Users\cat-r\Desktop\c# 02\codigo 04\bin\Debug\net7.0\P004.exe
+c:\Users\cat-r\Desktop\c# 02\codigo 04\bin\Debug\net7.0\P004.deps.json
+c:\Users\cat-r\Desktop\c# 02\codigo 04\bin\Debug\net7.0\P004.runtimeconfig.json
+c:\Users\cat-r\Desktop\c# 02\codigo 04\bin\Debug\net7.0\P004.dll
+c:\Users\cat-r\Desktop\c# 02\codigo 04\bin\Debug\net7.0\P004.pdb
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.AssemblyInfoInputs.cache
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.AssemblyInfo.cs
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.csproj.CoreCompileInputs.cache
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.sourcelink.json
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.dll
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\refint\P004.dll
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.pdb
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\P004.genruntimeconfig.cache
+c:\Users\cat-r\Desktop\c# 02\codigo 04\obj\Debug\net7.0\ref\P004.dll
