@@ -26,6 +26,10 @@ public static class App
         List<CasoJuridico> casosAbertosPorData = escritorio.CasosAbertosPorData();
         List<Advogado> advogadosDecrescentePorCasos = escritorio.AdvogadosDecrescentePorCasos();
         List<Documento> topDezDocumentos = escritorio.TopDezDocumentos();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56b041e48c0ff3137ff382e28114f36ab84c1b96
 
 
         int opcao;
@@ -48,7 +52,10 @@ public static class App
 
             opcao = Convert.ToInt32(Console.ReadLine());
             
+<<<<<<< HEAD
 
+=======
+>>>>>>> 56b041e48c0ff3137ff382e28114f36ab84c1b96
             switch (opcao)
             {
                 case 1:
@@ -121,8 +128,13 @@ public static class App
                         Console.WriteLine(_caso);
                     }
                     break;
+<<<<<<< HEAD
                 case 0:
                     escolha = false;
+=======
+                case 11:
+                    Console.WriteLine("Saindo...");
+>>>>>>> 56b041e48c0ff3137ff382e28114f36ab84c1b96
                     break;
                 default:
                     Console.WriteLine("Opcão inválida. Tente novamente.");
