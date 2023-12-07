@@ -1,20 +1,15 @@
-﻿namespace TIC18_DOTNET_P004;
-
-public class Documento{
-    public string Nome { get; set; }
-    public string Descricao { get; set; }
-    public DateTime DataCriacao { get; set; }
-    public DateTime DataAlteracao { get; set; }
+﻿class Documento
+{
+    public DateTime DataModificacao { get; set; }
+    public int Codigo { get; set; }
     public string Tipo { get; set; }
-    public string Caminho { get; set; }
+    public string Descricao { get; set; }
 
-    public Documento(string nome, string descricao, DateTime dataCriacao, DateTime dataAlteracao, string tipo, string caminho)
+     public Documento(DateTime dataModificacao, int codigo, string tipo, string descricao)
     {
-        Nome = nome;
+        DataModificacao = dataModificacao;
+        Codigo = codigo;
+        Tipo = tipo; 
         Descricao = descricao;
-        DataCriacao = dataCriacao;
-        DataAlteracao = dataAlteracao;
-        Tipo = tipo;
-        Caminho = caminho;
     }
 }

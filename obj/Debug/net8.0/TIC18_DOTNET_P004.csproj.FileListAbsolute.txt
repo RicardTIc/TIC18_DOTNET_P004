@@ -1,0 +1,15 @@
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\bin\Debug\net8.0\TIC18_DOTNET_P004.exe
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\bin\Debug\net8.0\TIC18_DOTNET_P004.deps.json
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\bin\Debug\net8.0\TIC18_DOTNET_P004.runtimeconfig.json
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\bin\Debug\net8.0\TIC18_DOTNET_P004.dll
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\bin\Debug\net8.0\TIC18_DOTNET_P004.pdb
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.AssemblyInfoInputs.cache
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.AssemblyInfo.cs
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.sourcelink.json
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.dll
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\refint\TIC18_DOTNET_P004.dll
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.pdb
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\TIC18_DOTNET_P004.genruntimeconfig.cache
+C:\Users\david\Desktop\Programaçao\residencia\DOTNET\TIC18_DOTNET_P004\obj\Debug\net8.0\ref\TIC18_DOTNET_P004.dll

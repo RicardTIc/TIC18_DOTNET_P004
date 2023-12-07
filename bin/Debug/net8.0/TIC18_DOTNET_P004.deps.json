@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TIC18_DOTNET_P004/1.0.0": {
+        "runtime": {
+          "TIC18_DOTNET_P004.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TIC18_DOTNET_P004/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
