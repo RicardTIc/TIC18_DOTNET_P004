@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/daniel-penedo-santos/.nuget/packages/": {}
+    "/home/gustavo-souza-gonzaga/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
+      "projectUniqueName": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
       "projectName": "Solucao",
-      "projectPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
-      "packagesPath": "/home/daniel-penedo-santos/.nuget/packages/",
-      "outputPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/",
+      "projectPath": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
+      "packagesPath": "/home/gustavo-souza-gonzaga/.nuget/packages/",
+      "outputPath": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/daniel-penedo-santos/.nuget/NuGet/NuGet.Config"
+        "/home/gustavo-souza-gonzaga/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

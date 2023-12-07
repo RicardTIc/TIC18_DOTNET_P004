@@ -1,3 +1,3 @@
 ﻿using AVT5.Solucao;
 
-App.Init();
+App.Main();
