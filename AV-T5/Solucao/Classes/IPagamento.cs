@@ -4,7 +4,7 @@ public interface IPagamento
 {
     TipoPagamento Tipo { get; set; }
     string Descricao { get; set; }
-    double ValorBruto { get; set; }
+    double Valor { get; set; }
     double Desconto { get; set; }
     DateTime DataHora { get; set; }
 
@@ -22,36 +22,44 @@ public interface IPagamento
 public class CartaoCredito : IPagamento{
 
     public string Descricao { get; set; }
-    public double ValorBruto { get; set; }
+    public double Valor { get; set; }
     public double Desconto { get; set; } = 5
     public DateTime DataHora { get; set; } 
 
-    public CartaoCredito(string descricao, double valorBruto){
-        Descricao = descricao;
-        ValorBruto = valorBruto;
-        DataHora = DateTime.Now;
+    public CartaoCredito(){
+        
     }
     
-    public void RealizarPagamento(double valor){
-        Console.WriteLine($"Pagamento de {valor} realizado com cartão de crédito!");
+    public void RealizarPagamento(string descricao, double valor){
+        Descricao = descricao;
+        Valor = valor;
+        DataHora = DateTime.Now;
+        var ValorResultado = valor - (valor * (Desconto / 100.0));
+        Console.WriteLine(
+            $"Pagamento de {ValorResultado} realizado no cartão de crédito com 5% de desconto!"
+        );
    }
 }
 
 public class Pix : IPagamento{
 
     public string Descricao { get; set; }
-    public double ValorBruto { get; set; }
+    public double Valor { get; set; }
     public double Desconto { get; set; } = 20
     public DateTime DataHora { get; set; } 
 
-    public Pix(string descricao, double valorBruto){
-        Descricao = descricao;
-        ValorBruto = valorBruto;
-        DataHora = DateTime.Now;
+    public Pix(){
+       
     }
     
-    public void RealizarPagamento(double valor){
-      Console.WriteLine($"Pagamento de {valor} realizado por pix!");
+    public void RealizarPagamento(string descricao, double valor){
+        Descricao = descricao;
+        Valor = valor;
+        DataHora = DateTime.Now;
+        var ValorResultado = valor - (valor * (Desconto / 100.0));
+        Console.WriteLine(
+            $"Pagamento de {ValorResultado} realizado no PIX com 20% de desconto!"
+        );
    }
 }
 
@@ -62,14 +70,20 @@ public class DinheiroEspecie : IPagamento{
     public double Desconto { get; set; } = 20
     public DateTime DataHora { get; set; }
 
-    public DinheiroEspecie(string descricao, double valorBruto){
+    public DinheiroEspecie(string descricao, double valor){
         Descricao = descricao;
-        ValorBruto = valorBruto;
+        Valor = valor;
         DataHora = DateTime.Now;
     }
     
-    public void RealizarPagamento(double valor){
-      Console.WriteLine($"Pagamento de {valor} realizado com dinheiro em espécie!");
+    public void RealizarPagamento(string descricao, double valor){
+        Descricao = descricao;
+        Valor = valor;
+        DataHora = DateTime.Now;
+        var ValorResultado = valor - (valor * (Desconto / 100.0));
+        Console.WriteLine(
+            $"Pagamento de {ValorResultado} realizado com dinheiro em espécie com 20% de desconto!"
+        );
    }
 }
 
