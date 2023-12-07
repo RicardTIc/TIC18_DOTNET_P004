@@ -94,9 +94,12 @@ class Escritorio
     private List<Cliente> clientes = new List<Cliente>();
     private List<CasoJuridico> casosJuridicos = new List<CasoJuridico>();
     private List<Cliente> todosOsClientes = new List<Cliente>();
+    private List<Advogado> todosOsAdvogados = new List<Advogado>();
+
 
     public void AdicionarAdvogado(Advogado advogado)
     {
+        todosOsAdvogados.Add(advogado);
         advogados.Add(advogado);
     }
 
@@ -146,6 +149,17 @@ class Escritorio
         return clientesFiltrados;
     }
 
+    public List<Pessoa> ObterAniversariantesDoMes(int mesInformado)
+    {
+        var aniversariantes = todosOsAdvogados
+            .Where(advogado => advogado.DataNascimento.Month == mesInformado)
+            .Cast<Pessoa>()
+            .Union(todosOsClientes.Where(cliente => cliente.DataNascimento.Month == mesInformado))
+            .ToList();
+
+        return aniversariantes;
+    }
+
 }
 
 class Program
@@ -165,6 +179,7 @@ class Program
         var relatorioClientesEstadoCivil = escritorio.ObterClientesComEstadoCivil("Solteiro");
         var relatorioClientesOrdemAlfabetica = escritorio.ObterClientesEmOrdemAlfabetica();
         var relatorioClientePorProfissao = escritorio.ObterClientesPorProfissao("Engenheiro");
+        var relatorioAdvogadoClienteMesAniversario = escritorio.ObterAniversariantesDoMes(1);
 
         Console.WriteLine("Advogados entre 30 e 40 anos:");
         foreach (var adv in relatorioAdvogados)
@@ -195,5 +210,11 @@ class Program
         {
             Console.WriteLine(cliPorProf.Nome);
         }
+
+        Console.WriteLine($"Aniversariantes do Mês 1:");
+            foreach (var pessoa in relatorioAdvogadoClienteMesAniversario)
+            {
+                Console.WriteLine(pessoa.Nome);
+            }
     }
 }
