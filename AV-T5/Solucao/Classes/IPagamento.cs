@@ -2,17 +2,10 @@ namespace AVT5.Solucao;
 
 public interface IPagamento
 {
-    TipoPagamento Tipo { get; set; }
-    string Descricao { get; set; }
+    string? Descricao { get; set; }
     double Valor { get; set; }
     double Desconto { get; set; }
     DateTime DataHora { get; set; }
-
-    public enum TipoPagamento{
-    CartaoCredito,
-    Pix,
-    DinheiroEmEspecie
-    }
 
     public void RealizarPagamento(double valor){
 
@@ -21,9 +14,9 @@ public interface IPagamento
 
 public class CartaoCredito : IPagamento{
 
-    public string Descricao { get; set; }
+    public string? Descricao { get; set; }
     public double Valor { get; set; }
-    public double Desconto { get; set; } = 5
+    public double Desconto { get; set; } = 5;
     public DateTime DataHora { get; set; } 
 
     public CartaoCredito(){
@@ -43,9 +36,9 @@ public class CartaoCredito : IPagamento{
 
 public class Pix : IPagamento{
 
-    public string Descricao { get; set; }
+    public string? Descricao { get; set; }
     public double Valor { get; set; }
-    public double Desconto { get; set; } = 20
+    public double Desconto { get; set; } = 20;
     public DateTime DataHora { get; set; } 
 
     public Pix(){
@@ -65,9 +58,9 @@ public class Pix : IPagamento{
 
 public class DinheiroEspecie : IPagamento{
 
-    public string Descricao { get; set; }
-    public double ValorBruto { get; set; }
-    public double Desconto { get; set; } = 20
+    public string? Descricao { get; set; }
+    public double Valor { get; set; }
+    public double Desconto { get; set; } = 20;
     public DateTime DataHora { get; set; }
 
     public DinheiroEspecie(string descricao, double valor){

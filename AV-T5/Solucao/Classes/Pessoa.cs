@@ -27,6 +27,8 @@ public class Advogado : Pessoa
 
 public class Cliente : Pessoa
 {
+    public PlanoConsultoria PlanoConsultoria { get; set; }
+    public List<IPagamento> Pagamento { get; set; }
     public string EstadoCivil { get; set; }
     public string Profissao { get; set; }    
 
