@@ -1,4 +1,4 @@
-namespace AVT5.Solucao;
+    namespace AVT5.Solucao;
 public class CasoJuridico
 {
     public DateTime Abertura { get; set; }
