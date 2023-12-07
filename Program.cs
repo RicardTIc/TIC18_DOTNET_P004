@@ -131,6 +131,12 @@ class Escritorio
 
     }
 
+    public List<Cliente> ObterClientesEmOrdemAlfabetica()
+    {
+        var clientesOrdenados = todosOsClientes.OrderBy(cliente => cliente.Nome).ToList();
+        return clientesOrdenados;
+    }
+
 }
 
 class Program
@@ -148,6 +154,7 @@ class Program
         var relatorioAdvogados = escritorio.ObterAdvogadosEntreIdades(30, 40);
         var relatorioClientes = escritorio.ObterClientesEntreIdades(25, 35);
         var relatorioClientesEstadoCivil = escritorio.ObterClientesComEstadoCivil("Solteiro");
+        var relatorioClientesOrdemAlfabetica = escritorio.ObterClientesEmOrdemAlfabetica();
 
         Console.WriteLine("Advogados entre 30 e 40 anos:");
         foreach (var adv in relatorioAdvogados)
@@ -165,6 +172,12 @@ class Program
         foreach (var cliEstCiv in relatorioClientesEstadoCivil)
         {
             Console.WriteLine(cliEstCiv.Nome);
+        }
+
+        Console.WriteLine("Clientes em Ordem Alfabética:");
+        foreach (var cliente in relatorioClientesOrdemAlfabetica)
+        {
+            Console.WriteLine($"Nome: {cliente.Nome}");
         }
     }
 }
