@@ -54,7 +54,7 @@ class Program
                         escritorio.ListarAdvogadosPorQuantidadeCasosConcluidos();
                         break;
                     case 9:
-                        escritorio.ListarCasosPorDescricaoCusto();
+                        
                         break;
                     case 10:
                         escritorio.ListarTop10TiposDocumentosMaisInseridos();
@@ -73,10 +73,5 @@ class Program
             }
         }
     }
-    static void Main()
-    {
-
-    }
-
 
 }

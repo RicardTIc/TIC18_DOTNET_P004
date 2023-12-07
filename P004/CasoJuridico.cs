@@ -8,8 +8,6 @@ public class CasoJuridico
     public List<Advogado> Advogados { get; set; }
     public Cliente Cliente { get; set; }
     public string Status { get; set; }
-    public List<Advogado> Advogados { get; set; }
-    public Cliente Cliente { get; set; }
      public void IniciarCaso()
     {
         if (Status == "Em aberto")

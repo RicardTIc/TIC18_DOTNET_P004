@@ -216,4 +216,123 @@ public class EscritorioAdvocacia
             Console.WriteLine($"Aniversariante: {pessoa.Nome}, CPF: {pessoa.CPF}");
         }
     }
+    // Dentro da classe EscritorioAdvocacia
+
+    public void ListarClientesPorIdade()
+    {
+        Console.Write("Informe a idade mínima: ");
+        if (int.TryParse(Console.ReadLine(), out int idadeMinima))
+        {
+            Console.Write("Informe a idade máxima: ");
+            if (int.TryParse(Console.ReadLine(), out int idadeMaxima))
+            {
+                var clientesPorIdade = ObterClientesPorIdade(idadeMinima, idadeMaxima);
+
+                Console.WriteLine("\nClientes com idade entre {0} e {1} anos:\n", idadeMinima, idadeMaxima);
+
+                foreach (var cliente in clientesPorIdade)
+                {
+                    Console.WriteLine($"Nome: {cliente.Nome}, Idade: {CalcularIdade(cliente.DataNascimento)} anos, CPF: {cliente.CPF}, Estado Civil: {cliente.EstadoCivil}, Profissão: {cliente.Profissao}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Idade máxima inválida.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Idade mínima inválida.");
+        }
+    }
+    // Dentro da classe EscritorioAdvocacia
+
+    public void ListarClientesPorEstadoCivil()
+    {
+        Console.Write("Informe o estado civil (Solteiro, Casado, Divorciado, Viúvo): ");
+        if (Enum.TryParse(Console.ReadLine(), true, out EstadoCivil estadoCivil))
+        {
+            var clientesPorEstadoCivil = ObterClientesPorEstadoCivil(estadoCivil);
+
+            Console.WriteLine($"\nClientes com estado civil {estadoCivil}:\n");
+
+            ImprimirClientes(clientesPorEstadoCivil);
+        }
+        else
+        {
+            Console.WriteLine("Estado civil inválido.");
+        }
+    }
+
+    public void ListarClientesOrdemAlfabetica()
+    {
+        var clientesOrdemAlfabetica = ObterClientesOrdemAlfabetica();
+
+        Console.WriteLine("\nClientes em ordem alfabética:\n");
+
+        ImprimirClientes(clientesOrdemAlfabetica);
+    }
+
+    public void ListarClientesPorProfissao()
+    {
+        Console.Write("Informe um texto para buscar por profissão: ");
+        string textoProfissao = Console.ReadLine();
+        var clientesPorProfissao = ObterClientesPorProfissao(textoProfissao);
+
+        Console.WriteLine($"\nClientes cuja profissão contém '{textoProfissao}':\n");
+
+        ImprimirClientes(clientesPorProfissao);
+    }
+
+    public void ListarAniversariantesDoMes()
+    {
+        Console.Write("Informe o mês para buscar aniversariantes (1 a 12): ");
+        if (int.TryParse(Console.ReadLine(), out int mesAniversario))
+        {
+            var aniversariantes = ObterAniversariantesDoMes(mesAniversario);
+
+            Console.WriteLine($"\nAniversariantes do mês {mesAniversario}:\n");
+
+            ImprimirAniversariantes(aniversariantes);
+        }
+        else
+        {
+            Console.WriteLine("Mês inválido.");
+        }
+    }
+
+    public void ListarCasosEmAberto()
+    {
+        var casosEmAberto = ObterCasosEmAberto();
+
+        Console.WriteLine("\nCasos com status 'Em aberto', em ordem crescente pela data de início:\n");
+
+        foreach (var caso in casosEmAberto)
+        {
+            Console.WriteLine($"Abertura: {caso.Abertura}, Cliente: {caso.Cliente.Nome}, Status: {caso.Status}");
+        }
+    }
+
+    public void ListarAdvogadosPorQuantidadeCasosConcluidos()
+    {
+        var advogadosPorQuantidadeCasosConcluidos = ObterAdvogadosPorQuantidadeCasosConcluidos();
+
+        Console.WriteLine("\nAdvogados em ordem decrescente pela quantidade de casos concluídos:\n");
+
+        ImprimirAdvogados(advogadosPorQuantidadeCasosConcluidos);
+    }
+
+    public void ListarTop10TiposDocumentosMaisInseridos()
+    {
+        var top10TiposDocumentos = ObterTop10TiposDocumentosMaisInseridos();
+
+        Console.WriteLine("\nTop 10 tipos de documentos mais inseridos nos casos:\n");
+
+        foreach (var tipoDocumento in top10TiposDocumentos)
+        {
+            Console.WriteLine($"Tipo de documento: {tipoDocumento}");
+        }
+    }
+
+
 }
