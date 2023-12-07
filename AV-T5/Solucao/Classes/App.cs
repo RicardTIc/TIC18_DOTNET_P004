@@ -26,11 +26,6 @@ public static class App
         List<CasoJuridico> casosAbertosPorData = escritorio.CasosAbertosPorData();
         List<Advogado> advogadosDecrescentePorCasos = escritorio.AdvogadosDecrescentePorCasos();
         List<Documento> topDezDocumentos = escritorio.TopDezDocumentos();
-<<<<<<< HEAD
-=======
-
->>>>>>> 56b041e48c0ff3137ff382e28114f36ab84c1b96
-
 
         int opcao;
         bool escolha = true;
