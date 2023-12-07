@@ -36,12 +36,13 @@ public static class App
             Console.WriteLine("2 - Clientes entre 25 e 35 anos");
             Console.WriteLine("3 - Clientes por estado civil");
             Console.WriteLine("4 - Clientes em ordem alfabetica");
-            Console.WriteLine("5 - Casos abertos por data");
-            Console.WriteLine("6 - Advogados decrescente por casos");
-            Console.WriteLine("7 - Top 10 documentos");
-            Console.WriteLine("8 - Custos com palavra na descrição");
-            Console.WriteLine("9 - Pessoas por mês de aniversário");
-            Console.WriteLine("10 - Sair");
+            Console.WriteLine("5 - Clientes cuja profissão contenha texto informado pelo usuário");
+            Console.WriteLine("6 - Advogados e Clientes aniversariantes do mês informado");
+            Console.WriteLine("7 - Casos com o status “Em aberto”, em ordem crescente pela data de início.");
+            Console.WriteLine("8 - Advogados em ordem decrescente pela quantidade de casos com status “Concluído”");
+            Console.WriteLine("9 - Casos que possuam custo com uma determinada palavra na descrição.");
+            Console.WriteLine("10 - Top 10 tipos de documentos mais inseridos nos casos");
+            Console.WriteLine("11 - Sair");
 
             opcao = Convert.ToInt32(Console.ReadLine());
             
@@ -51,7 +52,7 @@ public static class App
                     Console.WriteLine("Advogados entre 30 e 50 anos:");
                     foreach (var adv in advogadosEntreIdades)
                     {
-                        Console.WriteLine(adv.Nome + " - " + adv.CPF + " - " + adv.CNA); ;
+                        Console.WriteLine(adv.Nome + " - " + adv.CPF + " - " + adv.CNA);
                     }
                     break;
                 case 2:
@@ -116,6 +117,9 @@ public static class App
                     {
                         Console.WriteLine(_caso);
                     }
+                    break;
+                case 11:
+                    Console.WriteLine("Saindo...");
                     break;
                 default:
                     Console.WriteLine("Opcão inválida. Tente novamente.");
