@@ -4,12 +4,15 @@ class Escritorio
     public List<Advogado> Advogados { get; set; }
     public List<Cliente> Clientes { get; set; }
     public List<CasoJuridico> CasosJuridicos { get; set; }
+    public List<Pessoa> pessoas = new List<Pessoa>();
+    public List<Documento> Documentos { get; set; }
 
     public Escritorio()
     {
         Advogados = new List<Advogado>();
         Clientes = new List<Cliente>();
         CasosJuridicos = new List<CasoJuridico>();
+        Documentos = new List<Documento>();
     }
 
     public void IniciarCaso(CasoJuridico caso)
@@ -52,17 +55,46 @@ class Escritorio
     {
         return Clientes.OrderBy(c => c.Nome).ToList();
     }
-    public void RegistrarPagamento(Cliente cliente, IPagamento pagamento)
+
+    public List<Cliente> ClientePorProfissão(string profissao)
     {
-        cliente.Pagamentos.Add(pagamento);
+        return Clientes.Where(c => c.Profissao.Equals(profissao, StringComparison.OrdinalIgnoreCase)).ToList();
     }
+
+    public List<Pessoa> AdvogadosEClientesMesAniversario(int mes)
+    {
+        pessoas.AddRange(Advogados.Where(a => a.DataNascimento.Month == mes).ToList());
+        pessoas.AddRange(Clientes.Where(c => c.DataNascimento.Month == mes).ToList());
+        return pessoas;
+    }
+
+    public List<CasoJuridico> CasosAbertosPorData()
+    {
+        return CasosJuridicos.Where(c => c.Status == "Em aberto").ToList();
+    }
+
+    public List<Advogado> AdvogadosDecrescentePorCasos()
+    {
+        return Advogados.OrderByDescending(a => a.CasosJuridicos.Count).ToList();
+    }
+
+    public List<CasoJuridico> RelatorioCustosComPalavraNaDescricao(string palavraChave)
+    {
+        return CasosJuridicos.Where(c => c.Custos.Any(custo => custo.Item2.Contains(palavraChave, StringComparison.OrdinalIgnoreCase))).ToList();
+    }
+
+    public List<Documento> TopDezDocumentos()
+    {
+        return Documentos.OrderByDescending(d => d.Tipo).Take(10).ToList();
+    }
+
     public static void Main()
     {
         Escritorio escritorio = new Escritorio();
         
         // Inicialização de dados (apenas exemplo)
-        Advogado advogado = new Advogado("Advogado1", new DateTime(1980, 1, 1), "12345678901", "123456789");
-            escritorio.Advogados.Add(advogado);
+        Advogado advogado = new Advogado(_nome: "Advogado1", _dataNascimento: new DateTime(1980, 1, 1), _CPF: "12345678901", _CNA: "123456789", _casos: new List<CasoJuridico>());
+        escritorio.Advogados.Add(advogado);
 
             Cliente cliente = new Cliente("Cliente1", new DateTime(1980, 1, 1), "12345678901", "Solteiro", "Advogado");
             escritorio.Clientes.Add(cliente);

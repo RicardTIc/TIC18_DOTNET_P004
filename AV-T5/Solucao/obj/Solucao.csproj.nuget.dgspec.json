@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj": {}
+  },
+  "projects": {
+    "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
+        "projectName": "Solucao",
+        "projectPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
+        "packagesPath": "/home/daniel-penedo-santos/.nuget/packages/",
+        "outputPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/daniel-penedo-santos/.nuget/NuGet/NuGet.Config"
+>>>>>>> origin/desenvolvimento
         ],
         "originalTargetFrameworks": [
           "net7.0"
