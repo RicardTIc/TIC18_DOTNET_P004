@@ -137,6 +137,15 @@ class Escritorio
         return clientesOrdenados;
     }
 
+    public List<Cliente> ObterClientesPorProfissao(string textoInformado)
+    {
+        var clientesFiltrados = todosOsClientes
+            .Where(cliente => cliente.Profissao.Contains(textoInformado, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        return clientesFiltrados;
+    }
+
 }
 
 class Program
@@ -155,6 +164,7 @@ class Program
         var relatorioClientes = escritorio.ObterClientesEntreIdades(25, 35);
         var relatorioClientesEstadoCivil = escritorio.ObterClientesComEstadoCivil("Solteiro");
         var relatorioClientesOrdemAlfabetica = escritorio.ObterClientesEmOrdemAlfabetica();
+        var relatorioClientePorProfissao = escritorio.ObterClientesPorProfissao("Engenheiro");
 
         Console.WriteLine("Advogados entre 30 e 40 anos:");
         foreach (var adv in relatorioAdvogados)
@@ -175,9 +185,15 @@ class Program
         }
 
         Console.WriteLine("Clientes em Ordem Alfabética:");
-        foreach (var cliente in relatorioClientesOrdemAlfabetica)
+        foreach (var cliOrdAlf in relatorioClientesOrdemAlfabetica)
         {
-            Console.WriteLine($"Nome: {cliente.Nome}");
+            Console.WriteLine(cliOrdAlf.Nome);
+        }
+
+        Console.WriteLine($"Clientes cuja profissão contenha Engenheiro:");
+        foreach (var cliPorProf in relatorioClientePorProfissao)
+        {
+            Console.WriteLine(cliPorProf.Nome);
         }
     }
 }
