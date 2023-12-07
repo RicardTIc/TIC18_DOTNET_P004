@@ -6,6 +6,7 @@ class Escritorio
     public List<CasoJuridico> CasosJuridicos { get; set; }
     public List<Pessoa> pessoas = new List<Pessoa>();
     public List<Documento> Documentos { get; set; }
+    public List<PlanoConsultoria> PlanoConsultoria { get; set; }
 
     public Escritorio()
     {
