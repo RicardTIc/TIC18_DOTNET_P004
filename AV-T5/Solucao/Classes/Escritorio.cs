@@ -4,7 +4,7 @@ class Escritorio
     public List<Advogado> Advogados { get; set; }
     public List<Cliente> Clientes { get; set; }
     public List<CasoJuridico> CasosJuridicos { get; set; }
-
+    public List<Pessoa> pessoas = new List<Pessoa>();
     public List<Documento> Documentos { get; set; }
 
     public Escritorio()
@@ -63,7 +63,6 @@ class Escritorio
 
     public List<Pessoa> AdvogadosEClientesMesAniversario(int mes)
     {
-        List<Pessoa> pessoas = new List<Pessoa>();
         pessoas.AddRange(Advogados.Where(a => a.DataNascimento.Month == mes).ToList());
         pessoas.AddRange(Clientes.Where(c => c.DataNascimento.Month == mes).ToList());
         return pessoas;
