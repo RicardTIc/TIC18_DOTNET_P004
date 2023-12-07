@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj": {}
+    "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj": {}
   },
   "projects": {
-    "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj": {
+    "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj",
         "projectName": "Solucao",
-        "projectPath": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
-        "packagesPath": "/home/gustavo-souza-gonzaga/.nuget/packages/",
-        "outputPath": "/home/gustavo-souza-gonzaga/TIC18_DOTNET_P004/AV-T5/Solucao/obj/",
+        "projectPath": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gustavo-souza-gonzaga/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
