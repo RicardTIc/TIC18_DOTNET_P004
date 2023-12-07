@@ -6,6 +6,7 @@ public static class App{
     }
     public static void Main(){
         Escritorio escritorio = new Escritorio();
+        Cart
 
         // Inicialização de dados (apenas exemplo)
         Advogado advogado = new Advogado(_nome: "Advogado1", _dataNascimento: new DateTime(1980, 1, 1), _CPF: "12345678901", _CNA: "123456789");
