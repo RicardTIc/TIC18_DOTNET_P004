@@ -78,13 +78,13 @@ class CasoJuridico
     public Cliente Cliente { get; set; }
     public string Status { get; set; }
 
-    public CasoJuridico(DateTime dataAbertura, float probabilidadeDeSucesso, DateTime dataEncerramento, Cliente cliente, string status)
+    public CasoJuridico(DateTime dataAbertura, float probabilidadeDeSucesso, List<Documento> documentos, List<float> custos, Cliente cliente, string status)
     {
         Abertura = dataAbertura;
         ProbabilidadeSucesso = probabilidadeDeSucesso;
-        Documentos = new List<Documento>();
-        Custos = new List<float>();
-        Encerramento = dataEncerramento;
+        Documentos = documentos ?? new List<Documento>();
+        Custos = custos ?? new List<float>();
+        Encerramento = null;
         Advogados = new List<Advogado>();
         Cliente = cliente;
         Status = status;
@@ -117,6 +117,11 @@ class Escritorio
     private List<Cliente> todosOsClientes = new List<Cliente>();
     private List<Advogado> todosOsAdvogados = new List<Advogado>();
 
+    public void AdicionarCasoJuridico(CasoJuridico casojuridico)
+    {
+        todosOsCasosJuridicos.Add(casojuridico);
+        casoJuridico.Add(casojuridico);
+    }
 
     public void AdicionarAdvogado(Advogado advogado)
     {
@@ -202,11 +207,15 @@ class Program
         Advogado advogado1 = new Advogado("Advogado1", new DateTime(1990, 1, 1), "12345678901", "CNA1");
         Cliente cliente1 = new Cliente("Cliente1", new DateTime(1985, 5, 5), "98765432109", "Solteiro", "Engenheiro");
         Documento documento1 = new Documento(new DateTime(1985, 5, 5), 111, "relatório", "documental");
-        CasoJuridico casoJuridico1 = new CasoJuridico(DateTime.Now.AddMonths(-1), 0.8f, DateTime.Now.AddMonths(1), new Cliente("Cliente1", DateTime.Now, "11111111111", "Casado", "Profissao1"), "Em aberto");
-        casoJuridico1.AdicionarAdvogado(advogado1);
-        casoJuridico1.AdicionarDocumento(documento1);
-        casoJuridico1.AdicionarCustos(21000);
+        CasoJuridico casoJuridico1 = new CasoJuridico(DateTime.Now.AddMonths(-1), 0.8f, new List<Documento> { documento1 }, new List<float> { 21000 }, cliente1, "Em aberto");
 
+        casoJuridico1.AdicionarAdvogado(advogado1);
+
+        Console.WriteLine($"Custos no Caso Jurídico:");
+
+        
+
+        escritorio.AdicionarCasoJuridico(casoJuridico1);
         escritorio.AdicionarAdvogado(advogado1);
         escritorio.AdicionarCliente(cliente1);
 
