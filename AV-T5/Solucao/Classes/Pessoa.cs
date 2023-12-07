@@ -16,10 +16,12 @@ public class Pessoa
 public class Advogado : Pessoa
 {
     public string CNA { get; set; }
+    public List<CasoJuridico> CasosJuridicos { get; set; }
 
-    public Advogado(string _nome, DateTime _dataNascimento, string _CPF, string _CNA) : base(_nome, _dataNascimento, _CPF)
+    public Advogado(string _nome, DateTime _dataNascimento, string _CPF, string _CNA, List<CasoJuridico> _casos) : base(_nome, _dataNascimento, _CPF)
     {
         this.CNA = _CNA;
+        this.CasosJuridicos = _casos;
     }
 }
 
