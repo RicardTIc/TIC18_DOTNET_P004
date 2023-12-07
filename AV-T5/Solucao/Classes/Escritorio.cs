@@ -89,8 +89,5 @@ class Escritorio
     {
         return Documentos.OrderByDescending(d => d.Tipo).Take(10).ToList();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 56b041e48c0ff3137ff382e28114f36ab84c1b96
+
