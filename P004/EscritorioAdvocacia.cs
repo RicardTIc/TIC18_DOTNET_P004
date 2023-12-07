@@ -333,6 +333,23 @@ public class EscritorioAdvocacia
             Console.WriteLine($"Tipo de documento: {tipoDocumento}");
         }
     }
+   public void ListarCasosPorDescricaoCusto()
+{
+    Console.Write("Informe uma palavra-chave na descrição do custo: ");
+    string palavraChave = Console.ReadLine();
+    var casosPorDescricaoCusto = ObterCasosPorDescricaoCusto(palavraChave);
+
+    Console.WriteLine($"\nCasos que possuem custo com '{palavraChave}' na descrição:\n");
+
+    foreach (var caso in casosPorDescricaoCusto)
+    {
+        var custo = caso.Custos.FirstOrDefault(c => c.Item2.Contains(palavraChave));
+        string descricaoCusto = custo != default ? custo.Item2 : null;
+
+        Console.WriteLine($"Abertura: {caso.Abertura}, Cliente: {caso.Cliente.Nome}, Descrição do custo: {descricaoCusto}");
+    }
+}
+
 
 
 }
