@@ -1,15 +1,24 @@
 using AVT5.Solucao;
 
-public static class App{
-    public static void Init(){
-      Main();
+public static class App
+{
+    public static void Init()
+    {
+        Main();
     }
-    public static void Main(){
+    public static void Main()
+    {
         Escritorio escritorio = new Escritorio();
 
         // Inicialização de dados (apenas exemplo)
-        Advogado advogado = new Advogado(_nome: "Advogado1", _dataNascimento: new DateTime(1980, 1, 1), _CPF: "12345678901", _CNA: "123456789");
-        escritorio.Advogados.Add(advogado);
+        Advogado advogado = new Advogado(
+    _nome: "Advogado1",
+    _dataNascimento: new DateTime(1980, 1, 1),
+    _CPF: "12345678901",
+    _CNA: "123456789",
+    _casos: new List<CasoJuridico>()  
+);
+
 
         Cliente cliente = new Cliente(_nome: "Cliente1", _dataNascimento: new DateTime(1980, 1, 1), _CPF: "12345678901", _estadoCivil: "Solteiro", _profissao: "Advogado");
         escritorio.Clientes.Add(cliente);
@@ -40,31 +49,31 @@ public static class App{
             else
             {
                 throw new Exception("Entrada inválida");
-            }    
-                switch (opcao)
-                {
-                    case 1:
-                        Console.WriteLine("Advogados entre 30 e 50 anos:");
-                        foreach (var adv in advogadosEntreIdades)
-                        {
-                            Console.WriteLine(adv.Nome + " - " + adv.CPF + " - " + adv.CNA); ;
-                        }
-                        break;
-                    case 2:
-                        Console.WriteLine("Clientes entre 25 e 35 anos:");
-                        foreach (var cli in clientesEntreIdades)
-                        {
-                            Console.WriteLine(cli.Nome + " - " + cli.CPF + " - " + cli.DataNascimento);
-                        }
-                        break;
-                    case 3:
-                        Console.WriteLine("Clientes por estado civil:");
-                        foreach (var cli in clientesPorEstadoCivil)
-                        {
-                            Console.WriteLine(cli.Nome + " - " + cli.CPF + " - " + cli.DataNascimento);
-                        }
-                        break;
-                }
+            }
+            switch (opcao)
+            {
+                case 1:
+                    Console.WriteLine("Advogados entre 30 e 50 anos:");
+                    foreach (var adv in advogadosEntreIdades)
+                    {
+                        Console.WriteLine(adv.Nome + " - " + adv.CPF + " - " + adv.CNA); ;
+                    }
+                    break;
+                case 2:
+                    Console.WriteLine("Clientes entre 25 e 35 anos:");
+                    foreach (var cli in clientesEntreIdades)
+                    {
+                        Console.WriteLine(cli.Nome + " - " + cli.CPF + " - " + cli.DataNascimento);
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("Clientes por estado civil:");
+                    foreach (var cli in clientesPorEstadoCivil)
+                    {
+                        Console.WriteLine(cli.Nome + " - " + cli.CPF + " - " + cli.DataNascimento);
+                    }
+                    break;
             }
         }
+    }
 }

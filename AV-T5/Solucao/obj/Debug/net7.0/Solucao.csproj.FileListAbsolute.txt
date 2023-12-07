@@ -13,3 +13,17 @@
 /home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/Debug/net7.0/Solucao.pdb
 /home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/Debug/net7.0/Solucao.genruntimeconfig.cache
 /home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/Debug/net7.0/ref/Solucao.dll
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.AssemblyInfoInputs.cache
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.AssemblyInfo.cs
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.csproj.CoreCompileInputs.cache
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.dll
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\refint\Solucao.dll
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.pdb
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\bin\Debug\net7.0\Solucao.exe
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\bin\Debug\net7.0\Solucao.deps.json
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\bin\Debug\net7.0\Solucao.runtimeconfig.json
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\bin\Debug\net7.0\Solucao.dll
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\bin\Debug\net7.0\Solucao.pdb
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\Solucao.genruntimeconfig.cache
+C:\Users\Acer\OneDrive\Área de Trabalho\residência\TIC18_DOTNET_P004\AV-T5\Solucao\obj\Debug\net7.0\ref\Solucao.dll
