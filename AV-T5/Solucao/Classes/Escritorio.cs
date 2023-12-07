@@ -5,11 +5,14 @@ class Escritorio
     public List<Cliente> Clientes { get; set; }
     public List<CasoJuridico> CasosJuridicos { get; set; }
 
+    public List<Documento> Documentos { get; set; }
+
     public Escritorio()
     {
         Advogados = new List<Advogado>();
         Clientes = new List<Cliente>();
         CasosJuridicos = new List<CasoJuridico>();
+        Documentos = new List<Documento>();
     }
 
     public void IniciarCaso(CasoJuridico caso)
@@ -63,18 +66,28 @@ class Escritorio
         List<Pessoa> pessoas = new List<Pessoa>();
         pessoas.AddRange(Advogados.Where(a => a.DataNascimento.Month == mes).ToList());
         pessoas.AddRange(Clientes.Where(c => c.DataNascimento.Month == mes).ToList());
-        return pessoas; 
+        return pessoas;
     }
 
-    public List<CasoJuridico> CasosAbertosPorData(){
+    public List<CasoJuridico> CasosAbertosPorData()
+    {
         return CasosJuridicos.Where(c => c.Status == "Em aberto").ToList();
     }
 
-    public List<Advogado> AdvogadosDecrescentePorCasos(){
+    public List<Advogado> AdvogadosDecrescentePorCasos()
+    {
         return Advogados.OrderByDescending(a => a.CasosJuridicos.Count).ToList();
     }
 
-    
+    public List<CasoJuridico> RelatorioCustosComPalavraNaDescricao(string palavraChave)
+    {
+        return CasosJuridicos.Where(c => c.Custos.Any(custo => custo.Item2.Contains(palavraChave, StringComparison.OrdinalIgnoreCase))).ToList();
+    }
+
+    public List<Documento> TopDezDocumentos()
+    {
+        return Documentos.OrderByDescending(d => d.Tipo).Take(10).ToList();
+    }
 
     public static void Main()
     {
