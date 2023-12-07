@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "4r0O53vG9hommLBm9V5w3gFDnoSrfM01MdDRJ2bAKRRRWxdtVEB+pNcYfJgFdDbFF8/SQ/Dtpg8S8x+9Vp5zYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj",
-=======
-  "dgSpecHash": "hFGIb6u3wJaUAtX3EG/Jm1yCu3uenvrF8F9s+PRTCbouaewQGpQ2x2Oufb0jiom+i1jytLKfzKapm2WJJOyrJg==",
-  "success": true,
-  "projectFilePath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
->>>>>>> origin/desenvolvimento
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

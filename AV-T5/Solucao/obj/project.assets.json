@@ -8,16 +8,11 @@
     "net7.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Acer\\.nuget\\packages\\": {}
-=======
-    "/home/daniel-penedo-santos/.nuget/packages/": {}
->>>>>>> origin/desenvolvimento
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj",
       "projectName": "Solucao",
       "projectPath": "C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\Solucao.csproj",
@@ -26,16 +21,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
-      "projectName": "Solucao",
-      "projectPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/Solucao.csproj",
-      "packagesPath": "/home/daniel-penedo-santos/.nuget/packages/",
-      "outputPath": "/home/daniel-penedo-santos/Documentos/TIC18_DOTNET_P004/AV-T5/Solucao/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/home/daniel-penedo-santos/.nuget/NuGet/NuGet.Config"
->>>>>>> origin/desenvolvimento
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -77,5 +62,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Acer\\OneDrive\\Área de Trabalho\\residência\\TIC18_DOTNET_P004\\AV-T5\\Solucao\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
